@@ -39,7 +39,8 @@ let ratencion5 = {
   prevision: "FONASA",
 };
 
-console.log(ratencion1.paciente);
+
+
 
 const radiologia = [];
 
@@ -48,6 +49,13 @@ radiologia.push(ratencion2);
 radiologia.push(ratencion3);
 radiologia.push(ratencion4);
 radiologia.push(ratencion5);
+
+//requerimiento dia 2 radiologia
+
+radiologia.pop()
+radiologia.shift()
+
+
 
 console.log(radiologia);
 
@@ -95,6 +103,8 @@ document.write(`
 </div>
 
 `);
+
+//////////////////////////////////////////////////////////////////
 //traumatologia
 
 //objeto literal
@@ -138,6 +148,53 @@ let Tatencion5 = {
   prevision: "FONASA",
 };
 
+
+//requerimiento dia 2
+
+let tatencion6 ={
+  horadeatencion: "09:00",
+  medicoEspecialista: "RENE POBLETE",
+  paciente: "ANA GELLONA",
+  rut: "13123329-7",
+  prevision: "ISAPRE",
+};
+
+let tatencion7 ={
+  horadeatencion: "09:30",
+  medicoEspecialista: "MARIA SOLAR",
+  paciente: "RAMIRO ANDRADE",
+  rut: "12221451-K",
+  prevision: "FONASA",
+};
+
+let tatencion8 ={
+  horadeatencion: "10:00",
+  medicoEspecialista: "RAUL LOAIZA",
+  paciente: "CARMEN ISLA",
+  rut: "10112348-3",
+  prevision: "ISAPRE",
+};
+
+let tatencion9 ={
+  horadeatencion: "10:30",
+  medicoEspecialista: "ANTONIO LARENAS",
+  paciente: "PABLO LOAIZA",
+  rut: "13453234-1",
+  prevision: "ISAPRE",
+};
+
+let tatencion00 ={
+  horadeatencion: "12:00",
+  medicoEspecialista: "MATIAS ARAVENA",
+  paciente: "SUSANA POBLETE",
+  rut: "14345656-6",
+  prevision: "FONASA",
+};
+
+
+
+
+
 //array de objetos
 const traumatologia = [];
 
@@ -146,6 +203,16 @@ traumatologia.push(Tatencion2);
 traumatologia.push(Tatencion3);
 traumatologia.push(Tatencion4);
 traumatologia.push(Tatencion5);
+
+// push requerimiento dia 2
+traumatologia.push(tatencion6);
+traumatologia.push(tatencion7);
+traumatologia.push(tatencion8);
+traumatologia.push(tatencion9);
+traumatologia.push(tatencion00);
+
+
+
 
 console.log(traumatologia);
 
@@ -181,6 +248,7 @@ traumatologia.forEach((traumatologia) => {
         <td>${traumatologia.paciente}</td>
         <td>${traumatologia.rut}</td>
         <td>${traumatologia.prevision}</td>
+
     </tr>
 
     `);
@@ -193,6 +261,8 @@ document.write(`
 </div>
 
 `);
+
+///////////////////////////////////////////////////////////////////////////////////
 
 // dental
 
@@ -267,6 +337,8 @@ document.write(`
                 <th scope="col">prevision</th>
                 
             </tr>
+            especificaciones dia 2
+          
         </thead>
         <tbody>
 
@@ -282,6 +354,10 @@ dental.forEach((dental) => {
         <td>${dental.prevision}</td>
     </tr>
 
+    <p>${dental.horadeatencion} - ${dental.medicoEspecialista} - ${dental.paciente} - ${dental.rut} - ${dental.prevision}</p>
+
+
+
     `);
 });
 
@@ -292,3 +368,59 @@ document.write(`
 </div>
 
 `);
+
+
+// requerimiento dia 2 
+
+const userList = [];
+
+console.log(userList);
+
+
+userList.push(ratencion1.paciente);
+userList.push(ratencion2.paciente);
+userList.push(ratencion3.paciente);
+userList.push(ratencion4.paciente);
+userList.push(ratencion5.paciente);
+userList.push(Tatencion1.paciente);
+userList.push(Tatencion2.paciente);
+userList.push(Tatencion3.paciente);
+userList.push(Tatencion4.paciente);
+userList.push(Tatencion5.paciente);
+userList.push(tatencion6.paciente);
+userList.push(tatencion7.paciente);
+userList.push(tatencion8.paciente);
+userList.push(tatencion9.paciente);
+userList.push(tatencion00.paciente);
+userList.push(Datencion1.paciente);
+userList.push(Datencion2.paciente);
+userList.push(Datencion3.paciente);
+userList.push(Datencion4.paciente);
+userList.push(Datencion5.paciente);
+
+document.write(`
+    <p></p>
+    <div class="container">
+    Requerimiento dia 2
+    <p>Lista de pacientes</p>
+    <table class="table">
+
+`);
+
+userList.forEach((userList) => {
+  document.write(`
+
+
+    <p>${userList} </p>
+
+
+
+    `);
+});
+
+document.write(`
+
+</div>
+
+`);
+
